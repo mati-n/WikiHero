@@ -1,9 +1,43 @@
+@font-face {
+  font-family: "Staatliches";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Staatliches Regular"), local("Staatliches-Regular"),
+    url(https://fonts.gstatic.com/s/staatliches/v2/HI_OiY8KO6hCsQSoAPmtMYebvpA.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Happy Monkey";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Happy Monkey"), local("HappyMonkey-Regular"),
+    url(https://fonts.gstatic.com/s/happymonkey/v7/K2F2fZZcl-9SXwl5F_C4R_OwAAr3.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Bangers";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Bangers Regular"), local("Bangers-Regular"),
+    url(https://fonts.gstatic.com/s/bangers/v11/FeVQS0BTqb0h60ACH55Q2A.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Staatliches", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  font-size: 22px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

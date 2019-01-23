@@ -1,0 +1,16 @@
+.power_bar {
+  width: 100%;
+  margin: 0 auto;
+}
+.bar {
+  min-width: 15rem;
+  height: 2rem;
+  border: red solid 0.1rem;
+  text-align: center;
+}
+.progress_bar {
+  position: absolute;
+  height: 2rem;
+  background-color: purple;
+  z-index: -1;
+}

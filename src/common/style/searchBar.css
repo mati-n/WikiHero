@@ -1,0 +1,138 @@
+.search {
+  position: relative;
+  width: 100%;
+  background-image: url("https://wallpapercave.com/wp/wp2564752.jpg");
+  background-position: bottom;
+  background-size: cover;
+  min-height: 19rem;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 2;
+}
+.search_form {
+  position: relative;
+  width: 100%;
+  min-height: 19rem;
+  background-color: rgba(255, 253, 253, 0.384);
+}
+
+.form_container {
+  display: flex;
+  flex-flow: column wrap;
+  position: absolute;
+  margin: 0;
+  top: 40%;
+  left: 50%;
+  -ms-transform: translate(-40%, -50%);
+  transform: translate(-40%, -50%);
+}
+.form_container h2 {
+  margin-bottom: 0;
+}
+.dot {
+  letter-spacing: 0.04rem;
+  -webkit-animation: fade 2s infinite;
+  -moz-animation: fade 2s infinite;
+  -o-animation: fade 2s infinite;
+  animation: fade 2s infinite;
+}
+#dot_1 {
+  animation-delay: 0.6s;
+}
+#dot_2 {
+  animation-delay: 1.2s;
+}
+#dot_3 {
+  animation-delay: 1.8s;
+}
+@-webkit-keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.form_container small {
+  opacity: 0.7;
+  margin-bottom: 0.02rem;
+}
+.search_field {
+  outline: none;
+  font-family: "Staatliches";
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 0.4rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  min-width: 12rem;
+}
+
+.search_button {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  outline: none;
+  border-radius: 0.2rem;
+  max-width: 8rem;
+  width: 8rem;
+  height: 2rem;
+  margin: 0 auto;
+  background-color: #c62828cc;
+  border: 0.1rem solid #c62828;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.search_button:hover {
+  background-color: #c62828de;
+  border-radius: 0.6rem;
+}
+.search_link {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  width: 100%;
+  top: 22%;
+  left: 0;
+}
