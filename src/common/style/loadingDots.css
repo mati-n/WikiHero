@@ -1,0 +1,61 @@
+.dot {
+  letter-spacing: 0.04rem;
+  -webkit-animation: fade 1.5s infinite;
+  -moz-animation: fade 1.5s infinite;
+  -o-animation: fade 1.5s infinite;
+  animation: fade 1.5s infinite;
+}
+#dot_1 {
+  animation-delay: 0.5s;
+}
+#dot_2 {
+  animation-delay: 1s;
+}
+#dot_3 {
+  animation-delay: 1.5s;
+}
+@-webkit-keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

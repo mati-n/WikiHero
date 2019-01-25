@@ -16,11 +16,13 @@ const HeroApi = {
       })
       .then(jsonResponse => {
         let results = [];
-        if (jsonResponse) {
-          for (let i = 0; i < jsonResponse.results.length; i++) {
-            results.push(jsonResponse.results[i]);
+        if (jsonResponse.response === "success") {
+          if (jsonResponse) {
+            for (let i = 0; i < jsonResponse.results.length; i++) {
+              results.push(jsonResponse.results[i]);
+            }
+            return results;
           }
-          return results;
         }
       });
   },
@@ -40,9 +42,11 @@ const HeroApi = {
       })
       .then(jsonResponse => {
         let result;
-        if (jsonResponse) {
-          result = jsonResponse;
-          return result;
+        if (jsonResponse.response === "success") {
+          if (jsonResponse) {
+            result = jsonResponse;
+            return result;
+          }
         }
       });
   }

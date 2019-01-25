@@ -1,6 +1,6 @@
 .hero_page {
   height: 100%;
-  background-color: #202020;
+  background-color: #212121;
   color: white;
   font-family: "Happy Monkey";
 }
@@ -11,32 +11,48 @@
   display: flex;
   flex-flow: row nowrap;
   list-style: none;
-  overflow: scroll;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem #c62828 solid;
+  width: 50%;
 }
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent;
 }
-.hero_information {
+.hero {
+  margin: 1rem auto;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .hero_details {
+  width: 50%;
   display: flex;
 }
-.hero_image {
+.hero_image img {
   position: relative;
-  margin: 1rem;
   height: auto;
   width: auto;
-  max-width: 100%;
-  max-height: 30rem;
+  max-height: 23rem;
 }
-#biography {
+.hero_image {
+  transition: all 0.5s ease-in-out;
+  opacity: 0.85;
+  z-index: 0;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  height: auto;
+  width: auto;
+  max-height: 22rem;
 }
-.test_show {
-  transition: opacity 1s ease-in;
+.hero_image:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.visible,
+.invisible {
+  transition: opacity 0.5s ease-in;
   list-style: none;
   display: flex;
   flex-flow: column wrap;
@@ -44,14 +60,16 @@
   opacity: 1;
   position: relative;
   z-index: 1;
+  margin: 0;
+  padding: 0;
 }
-.test_hide {
-  transition: opacity 1s ease-in;
-  list-style: none;
-  display: flex;
-  flex-flow: column wrap;
-  margin: 0 auto;
+.invisible {
   opacity: 0;
   position: absolute;
   z-index: -1;
+}
+
+#powerstats {
+  display: flex;
+  flex-flow: row wrap;
 }

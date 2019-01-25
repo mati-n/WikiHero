@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-
+import LoadingDots from "./loadingDots";
 import "./style/searchBar.css";
 
 class SearchBar extends Component {
@@ -12,16 +12,9 @@ class SearchBar extends Component {
           <div className="form_container">
             <h2>
               Search any superhero
-              <span id="dot_1" className="dot">
-                .
-              </span>
-              <span id="dot_2" className="dot">
-                .
-              </span>
-              <span id="dot_3" className="dot">
-                .
-              </span>
+              <LoadingDots />
             </h2>
+
             <small>(e.g. Spider-Man)</small>
             <input
               className="search_field"

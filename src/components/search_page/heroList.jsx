@@ -1,25 +1,40 @@
 import React, { Component } from "react";
 import HeroBox from "./heroBox";
 import HeroApi from "../../util/heroApi";
+import Loading from "./../../common/loading";
+import NotFound from "./../../common/notFound";
 
 import "./style/heroList.css";
 
 class HeroList extends Component {
   state = {
-    heroes: []
+    heroes: [],
+    loaded: false,
+    error: false
   };
   componentWillMount = () => {
     let heroes = [];
     HeroApi.search_name(this.props.match.params.name).then(results => {
+      if (results === undefined) {
+        this.setState({
+          error: true,
+          loaded: true
+        });
+        return null;
+      }
       results.map(hero => {
         heroes.push(hero);
       });
       this.setState({
-        heroes: heroes
+        heroes: heroes,
+        loaded: true
       });
     });
   };
-  render() {
+  content = () => {
+    if (this.state.error) {
+      return <NotFound />;
+    }
     let heroes = [];
     this.props.heroes.length === 0
       ? (heroes = this.state.heroes)
@@ -42,6 +57,9 @@ class HeroList extends Component {
         })}
       </div>
     );
+  };
+  render() {
+    return <div> {this.state.loaded ? this.content() : <Loading />} </div>;
   }
 }
 

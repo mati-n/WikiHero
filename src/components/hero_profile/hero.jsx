@@ -3,14 +3,17 @@ import HeroApi from "../../util/heroApi";
 import HeroNav from "./heroNav";
 import PowerBar from "./powerBar";
 import HeroDescription from "./../../common/heroDescription";
+import Loading from "./../../common/loading";
+import NotFound from "../../common/notFound";
 import "./style/hero.css";
 
 class Hero extends Component {
   state = {
     loaded: false,
-    biography: "test_show",
-    appearance: "test_hide",
-    powerstats: "test_hide",
+    error: false,
+    biography: "visible",
+    appearance: "invisible",
+    powerstats: "invisible",
     hero: {}
   };
 
@@ -18,27 +21,27 @@ class Hero extends Component {
     const { biography, appearance, powerstats } = this.state;
     const element = event.target.innerHTML;
     if (element === "Biography") {
-      if (biography === "test_hide") {
+      if (biography === "invisible") {
         this.setState({
-          biography: "test_show",
-          appearance: "test_hide",
-          powerstats: "test_hide"
+          biography: "visible",
+          appearance: "invisible",
+          powerstats: "invisible"
         });
       }
     } else if (element === "Appearance") {
-      if (appearance === "test_hide") {
+      if (appearance === "invisible") {
         this.setState({
-          biography: "test_hide",
-          appearance: "test_show",
-          powerstats: "test_hide"
+          biography: "invisible",
+          appearance: "visible",
+          powerstats: "invisible"
         });
       }
     } else {
-      if (powerstats === "test_hide") {
+      if (powerstats === "invisible") {
         this.setState({
-          biography: "test_hide",
-          appearance: "test_hide",
-          powerstats: "test_show"
+          biography: "invisible",
+          appearance: "invisible",
+          powerstats: "visible"
         });
       }
     }
@@ -46,6 +49,13 @@ class Hero extends Component {
 
   componentWillMount() {
     HeroApi.search_id(this.props.match.params.id).then(result => {
+      if (result === undefined) {
+        this.setState({
+          error: true,
+          loaded: true
+        });
+        return null;
+      }
       this.setState({
         hero: result,
         loaded: true
@@ -54,10 +64,19 @@ class Hero extends Component {
   }
 
   content = () => {
-    const { hero, biography, powerstats, appearance } = this.state;
+    const { hero, error, biography, powerstats, appearance } = this.state;
+    const { handleClick } = this;
+    if (error) {
+      return <NotFound />;
+    }
     return (
       <React.Fragment>
-        <div className="hero_information">
+        <ul className="hero_nav_container">
+          <HeroNav handleClick={handleClick} value="Biography" />
+          <HeroNav handleClick={handleClick} value="Appearance" />
+          <HeroNav handleClick={handleClick} value="Power Stats" />
+        </ul>
+        <div className="hero">
           <div className="hero_details">
             <ul id="biography" className={biography}>
               {Object.keys(hero.biography).map(bio => {
@@ -98,23 +117,17 @@ class Hero extends Component {
               })}
             </div>
           </div>
-          <img className="hero_image" alt={hero.name} src={hero.image.url} />
+          <div className="hero_image">
+            <img alt={hero.name} src={hero.image.url} />
+          </div>
         </div>
       </React.Fragment>
     );
   };
   render() {
     const { loaded } = this.state;
-    const { handleClick } = this;
     return (
-      <div className="hero_page">
-        <ul className="hero_nav_container">
-          <HeroNav handleClick={handleClick} value="Biography" />
-          <HeroNav handleClick={handleClick} value="Appearance" />
-          <HeroNav handleClick={handleClick} value="Power Stats" />
-        </ul>
-        {loaded ? this.content() : null}
-      </div>
+      <div className="hero_page">{loaded ? this.content() : <Loading />}</div>
     );
   }
 }

@@ -1,5 +1,6 @@
 .hero_nav_item {
   transition: all 0.18s ease-in-out;
+  color: white;
   display: flex;
   align-items: center;
   flex-flow: row wrap;
@@ -7,10 +8,10 @@
   cursor: pointer;
   padding: 0.1rem;
   border-bottom: 0.1rem solid transparent;
-  opacity: 0.85;
+  opacity: 0.8;
 }
 
 .hero_nav_item:hover {
   opacity: 1;
-  border-bottom: 0.1rem solid #c62828;
+  border-bottom: 0.1rem solid #f3f4f6;
 }

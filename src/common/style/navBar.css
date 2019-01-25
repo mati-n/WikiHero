@@ -5,6 +5,7 @@
   color: #f3f4f6;
   z-index: 100;
   top: 0;
+  border-bottom: 0.009rem #f3f4f6 solid;
 }
 .nav_list {
   display: flex;
@@ -35,6 +36,8 @@
   opacity: 0.8;
   animation: redify 0.3s forwards;
   -webkit-animation: redify 0.3s forwards;
+  -moz-animation: redify 0.3s forwards;
+  -o-animation: redify 0.3s forwards;
 }
 @keyframes redify {
   0% {

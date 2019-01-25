@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import HeroApi from "../../util/heroApi";
+
 import "./style/heroBar.css";
 
 class HeroBar extends Component {
   state = {
     hero: ""
   };
+
   componentDidMount = () => {
     HeroApi.search_id(this.props.heroId).then(result => {
       this.setState({

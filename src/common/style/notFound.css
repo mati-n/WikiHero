@@ -1,0 +1,38 @@
+.not_found {
+  font-family: "Staatliches";
+  min-height: 21rem;
+  color: #f3f4f6;
+  background-color: #212121;
+  display: flex;
+  flex: row nowrap;
+  width: 100%;
+}
+.not_found h1 {
+  margin: 0.5rem;
+}
+.not_found_content {
+  display: flex;
+  flex: row wrap;
+  align-items: center;
+  margin: 0 auto;
+  margin-left: 5rem;
+}
+
+.not_found img {
+  animation: hover 5s infinite ease-in-out;
+  width: auto;
+  height: auto;
+  max-height: 20rem;
+}
+
+@keyframes hover {
+  0% {
+    transform: translateY(-0.05rem);
+  }
+  50% {
+    transform: translateY(0.8rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
