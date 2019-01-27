@@ -10,16 +10,15 @@
 
 .fade-enter.fade-enter-active {
   opacity: 1;
-  transition: all 500ms ease-in-out;
-  transition-delay: 200ms;
+  transition: all 800ms;
 }
 
 .fade-exit {
-  opacity: 1;
+  opacity: 0;
 }
 
 .fade-exit.fade-exit-active {
   opacity: 0;
   position: absolute;
-  transition: all 100ms ease-in-out;
+  transition: all 600ms ease-in-out;
 }

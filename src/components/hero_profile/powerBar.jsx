@@ -2,13 +2,18 @@ import React from "react";
 import "./style/powerBar.css";
 
 const PowerBar = props => {
-  const { power, powerName } = props;
+  const { power: powerPercentage, powerName } = props;
+  const power = powerName.charAt(0).toUpperCase() + powerName.slice(1);
+
   return (
     <div className="power_bar">
-      <p>{powerName}</p>
+      <p>{power}</p>
       <div className="bar">
-        <div style={{ width: `${power}%` }} className="progress_bar" />
-        <small>{power}%</small>
+        <div
+          style={{ width: `${powerPercentage}%` }}
+          className="progress_bar"
+        />
+        <small>{powerPercentage}%</small>
       </div>
     </div>
   );

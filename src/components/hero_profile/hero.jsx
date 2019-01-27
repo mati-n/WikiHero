@@ -16,7 +16,10 @@ class Hero extends Component {
     powerstats: "invisible",
     hero: {}
   };
-
+  handleImageError = event => {
+    event.target.src =
+      "https://res.cloudinary.com/teepublic/image/private/s--AWVqmQY0--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1511473152/production/designs/2094145_1.jpg";
+  };
   handleClick = event => {
     const { biography, appearance, powerstats } = this.state;
     const element = event.target.innerHTML;
@@ -46,6 +49,9 @@ class Hero extends Component {
       }
     }
   };
+  handleReturn = () => {
+    this.props.history.goBack();
+  };
 
   componentWillMount() {
     HeroApi.search_id(this.props.match.params.id).then(result => {
@@ -65,7 +71,7 @@ class Hero extends Component {
 
   content = () => {
     const { hero, error, biography, powerstats, appearance } = this.state;
-    const { handleClick } = this;
+    const { handleClick, handleReturn } = this;
     if (error) {
       return <NotFound />;
     }
@@ -87,7 +93,11 @@ class Hero extends Component {
                       return " " + element;
                     });
                 return (
-                  <HeroDescription title={bio} info={hero.biography[bio]} />
+                  <HeroDescription
+                    key={bio}
+                    title={bio}
+                    info={hero.biography[bio]}
+                  />
                 );
               })}
             </ul>
@@ -99,6 +109,7 @@ class Hero extends Component {
                   ].splice(0, 1);
                 return (
                   <HeroDescription
+                    key={appearance}
                     title={appearance}
                     info={hero.appearance[appearance]}
                   />
@@ -117,8 +128,23 @@ class Hero extends Component {
               })}
             </div>
           </div>
-          <div className="hero_image">
-            <img alt={hero.name} src={hero.image.url} />
+          <div className="hero_image_container">
+            <img
+              className="hero_image"
+              alt={hero.name}
+              src={hero.image.url}
+              onError={this.handleImageError}
+            />
+            <button onClick={handleReturn} className="return_button">
+              Back to results
+            </button>
+
+            {/* <button
+              onClick={() => this.props.heroCompare(hero)}
+              className="return_button"
+            >
+              Add to Compare
+            </button> */}
           </div>
         </div>
       </React.Fragment>

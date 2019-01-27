@@ -1,6 +1,7 @@
 .hero_category,
 .hero_category_slideup,
 .hero_category_slidedown {
+  font-size: 1.2rem;
   transition: all 0.8s ease-in;
   -moz-transition: all 0.8s ease-in;
   -o-transition: all 0.8s ease-in;

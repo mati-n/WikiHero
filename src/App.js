@@ -5,6 +5,7 @@ import NavBar from "./common/navBar";
 import SearchBar from "./common/searchBar";
 import NotFound from "./common/notFound";
 import Footer from "./common/footer";
+import Compare from "./common/compare";
 import HeroList from "./components/search_page/heroList";
 import Hero from "./components/hero_profile/hero";
 import Home from "./components/home_page/home";
@@ -16,7 +17,8 @@ class App extends Component {
   state = {
     input: "",
     searchResult: [],
-    error: false
+    error: false,
+    compareList: []
   };
 
   handleChange = event => {
@@ -45,10 +47,19 @@ class App extends Component {
     });
     event.preventDefault();
   };
-
+  handleCompare = hero => {
+    const { compareList } = this.state;
+    if (compareList.length < 2) {
+      this.setState({
+        compareList: [...compareList, hero]
+      });
+    } else {
+      return null;
+    }
+  };
   render() {
-    const { handleSearch, handleChange } = this;
-    const { input, searchResult } = this.state;
+    const { handleSearch, handleChange, handleCompare } = this;
+    const { input, searchResult, compareList } = this.state;
     return (
       <Route
         render={({ location }) => (
@@ -63,14 +74,28 @@ class App extends Component {
               <TransitionGroup>
                 <CSSTransition
                   key={location.key}
-                  timeout={1000}
+                  timeout={{ enter: 500, exit: 500 }}
                   classNames="fade"
+                  onExit={node => {
+                    node.style.position = "fixed";
+                    node.style.top = -1 * window.scrollY + "px";
+                  }}
                 >
                   <Switch location={location}>
                     <Route
                       path="/heroes/:id"
                       render={props => (
-                        <Hero heroInfo={searchResult} {...props} />
+                        <Hero
+                          heroCompare={handleCompare}
+                          heroInfo={searchResult}
+                          {...props}
+                        />
+                      )}
+                    />
+                    <Route
+                      path="/compare"
+                      render={props => (
+                        <Compare heroes={compareList} {...props} />
                       )}
                     />
                     <Route

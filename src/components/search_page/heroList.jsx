@@ -12,6 +12,9 @@ class HeroList extends Component {
     loaded: false,
     error: false
   };
+  handleScroll = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   componentWillMount = () => {
     let heroes = [];
     HeroApi.search_name(this.props.match.params.name).then(results => {
@@ -55,6 +58,7 @@ class HeroList extends Component {
             />
           );
         })}
+        <div className="scroll_button" onClick={this.handleScroll} />
       </div>
     );
   };

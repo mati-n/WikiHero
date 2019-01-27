@@ -3,15 +3,33 @@
   width: 40%;
   margin: 0 1rem;
 }
-.bar {
+.bar,
+.progress_bar {
   position: relative;
+  border-radius: 0.5rem/0.5rem;
   height: 2rem;
-  border: red solid 0.1rem;
   text-align: center;
+}
+.bar {
+  border: #f3f4f6 solid 0.05rem;
 }
 .progress_bar {
   position: absolute;
-  height: 2rem;
-  background-color: purple;
+  background-image: linear-gradient(
+    to right,
+    #602424,
+    #6b2626,
+    #762828,
+    #822a2a,
+    #8d2c2c,
+    #972d2d,
+    #a02d2e,
+    #aa2e2f,
+    #b42e2f,
+    #be2f2f,
+    #c82f2f,
+    #d22f2f
+  );
   z-index: -1;
+  border-radius: 0.3rem/0.3rem;
 }

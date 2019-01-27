@@ -20,17 +20,17 @@
   margin: 1rem;
   width: 31%;
   min-width: 23rem;
+  max-width: 26rem;
   max-height: 17rem;
   height: 16.5rem;
   display: flex;
   flex-flow: row nowrap;
-  flex: 0 1 auto;
-  flex-grow: 0;
 }
 
 .box_details {
   background-color: #00000091;
   width: 100%;
+  height: 100%;
   display: flex;
   overflow: hidden;
   align-items: center;
@@ -38,13 +38,12 @@
 }
 .box_image {
   position: relative;
-
   transition: all 0.5s ease-in-out;
   width: 45%;
   color: #31682f;
 }
 
-.info_box {
+.box_info {
   padding: 0;
   list-style: none;
   margin: 0 auto;
