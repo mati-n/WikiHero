@@ -12,10 +12,10 @@ const NavBar = () => {
         <NavLink to="/" className="nav_item">
           Home
         </NavLink>
-        <NavLink to="" className="nav_item">
+        <NavLink to="/credits" className="nav_item">
           Credits
         </NavLink>
-        <NavLink to="" className="nav_item">
+        <NavLink to="/about" className="nav_item">
           About this page
         </NavLink>
       </ul>

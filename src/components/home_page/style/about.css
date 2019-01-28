@@ -1,0 +1,16 @@
+.about {
+  word-spacing: 0.05rem;
+  position: relative;
+  background-color: #212121;
+  color: #f3f4f6;
+  min-height: 21rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.about_text {
+  text-align: justify;
+  -moz-text-align-last: center;
+  text-align-last: center;
+  width: 50%;
+}

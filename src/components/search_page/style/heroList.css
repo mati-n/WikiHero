@@ -11,7 +11,7 @@
 }
 .scroll_button {
   animation: tremble 0.5s infinite ease;
-  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/24b6e130-c26e-473b-912e-381626e02766/d5hqgr9-20641c84-6c05-4c3a-8f8e-e092ac61e815.png/v1/fill/w_400,h_400,strp/spideypool_logo_by_irocandrew_d5hqgr9-fullview.png");
+  background-image: url("../media/scroll_button.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;

@@ -9,8 +9,9 @@ import Compare from "./common/compare";
 import HeroList from "./components/search_page/heroList";
 import Hero from "./components/hero_profile/hero";
 import Home from "./components/home_page/home";
+import About from "./components/home_page/about";
+import Credits from "./components/home_page/credits";
 import HeroApi from "./util/heroApi";
-
 import "./App.css";
 
 class App extends Component {
@@ -104,6 +105,8 @@ class App extends Component {
                         <HeroList heroes={searchResult} {...props} />
                       )}
                     />
+                    <Route path="/credits" exact component={Credits} />
+                    <Route path="/about" exact component={About} />
                     <Route path="/" exact component={Home} />
                     <Route path="/not-found" component={NotFound} />
                     <Redirect to="/not-found" component={NotFound} />

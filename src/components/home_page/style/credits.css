@@ -1,0 +1,42 @@
+.credits {
+  word-spacing: 0.05rem;
+  position: relative;
+  background-color: #212121;
+  color: #f3f4f6;
+  min-height: 21rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.credits h2 {
+  margin-top: 0.3rem;
+}
+.credits small {
+  font-size: 1.1rem;
+  opacity: 0.6;
+}
+.credit_list {
+  list-style: none;
+  margin: 0 auto;
+}
+.credit_list li {
+  margin: 1.3rem;
+  font-size: 1.3rem;
+  text-align: start;
+}
+.credit_list a {
+  transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  opacity: 0.8;
+  color: #c62828;
+  font-size: 1.5rem;
+}
+.credit_list a:hover {
+  opacity: 1;
+  color: #f3f4f6;
+}
+.table_row {
+  border-bottom: 0.05rem solid #f3f4f6;
+}
