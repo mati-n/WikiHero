@@ -11,7 +11,7 @@ class Home extends Component {
             title="marvel"
             heroId={[346, 332, 620, 213, 717, 659]}
             logoUrl={"./media/Marvel_wallpaper.jpg"}
-            boxText=" Marvel counts among its characters such well-known superheroes as Spider-Man, Iron Man, Thor and the Hulk. Most of Marvel's fictional characters operate in a single reality known as the Marvel Universe, with most locations mirroring real-life places."
+            boxText=" Marvel counts among its characters such well-known superheroes as Spider-Man, Iron Man, Thor and the Hulk. Most of Marvel's fictional characters operate in a single reality known as the Marvel Universe."
           />
           <HeroCategory
             title="DC"

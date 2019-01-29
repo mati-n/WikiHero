@@ -12,7 +12,6 @@ const NotFound = () => {
       <h1>404! Not Found...</h1>
       <div className="not_found_content">
         <img alt="deadpool image" src="./media/notfound_img.png" />
-
         <ul className="solutions">
           <p>Sorry! We couldn't find what you need!</p>
           <li>

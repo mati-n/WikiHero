@@ -5,6 +5,7 @@
   color: #f3f4f6;
   z-index: 100;
   top: 0;
+  min-height: 7.5vh;
   border-bottom: 0.009rem #f3f4f6 solid;
 }
 .nav_list {

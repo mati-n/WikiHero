@@ -3,21 +3,25 @@
   min-height: 21rem;
   color: #f3f4f6;
   background-color: #212121;
-  display: flex;
-  flex: row nowrap;
+  text-align: center;
   width: 100%;
 }
 .not_found h1 {
   margin: 0.5rem;
+  margin-top: 0;
 }
 .not_found_content {
   display: flex;
   flex: row wrap;
+  justify-content: center;
   align-items: center;
   margin: 0 auto;
   margin-left: 5rem;
 }
-
+.solutions {
+  list-style: none;
+  text-align: left;
+}
 .not_found img {
   animation: hover 5s infinite ease-in-out;
   width: auto;

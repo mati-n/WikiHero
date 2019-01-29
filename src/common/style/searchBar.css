@@ -4,20 +4,24 @@
   background-image: url("../media/search_wallpaper.jpg");
   background-position: bottom;
   background-size: cover;
-  min-height: 18.3rem;
+  height: 38.5vh;
+  min-height: 15rem;
   margin: 0 auto;
   text-align: center;
   z-index: 2;
 }
 .search_form {
+  display: flex;
   position: relative;
   width: 100%;
-  min-height: 18.3rem;
+  height: 100%;
   background-color: rgba(255, 253, 253, 0.384);
 }
 
 .form_container {
   display: flex;
+  flex-grow: inherit;
+  flex-shrink: inherit;
   flex-flow: column wrap;
   position: absolute;
   margin: 0;

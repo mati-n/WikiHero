@@ -7,10 +7,14 @@
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  justify-content: space-evenly;
 }
 .about_text {
   text-align: justify;
   -moz-text-align-last: center;
   text-align-last: center;
   width: 50%;
+  flex-grow: 1;
+  height: 100%;
+  min-height: 27vh;
 }

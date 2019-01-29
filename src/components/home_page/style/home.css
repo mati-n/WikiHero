@@ -1,6 +1,7 @@
 .home_container {
   position: relative;
   min-height: 21rem;
+  height: 46.5vh;
   color: #f3f4f6;
   background-color: rgba(0, 0, 0, 0.9);
   width: 100%;

@@ -19,9 +19,8 @@ const About = props => {
           style={{ textDecoration: "none", color: "#c62828" }}
           to="/credits"
         >
-          Credits
+          Credits.
         </NavLink>
-        .
       </p>
     </div>
   );

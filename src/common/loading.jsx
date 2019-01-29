@@ -5,7 +5,7 @@ const Loading = props => {
   return (
     <div className="loading_container">
       <img
-        src="./media/loading_img.png"
+        src="http://www.hero.matinnikookar.ir/search_hero/media/loading_img.png"
         alt="loading..."
         className="loading_img"
       />
@@ -15,5 +15,5 @@ const Loading = props => {
     </div>
   );
 };
-
+// "./media/loading_img.png"
 export default Loading;
