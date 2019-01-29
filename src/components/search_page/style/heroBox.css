@@ -13,18 +13,17 @@
 }
 .hero_box {
   position: relative;
+  display: flex;
+  flex-flow: row nowrap;
   color: #f3f4f6;
   box-shadow: -5px 5px 5px 2px #212121e7;
   font-size: 1.25rem;
-  margin: 0 auto;
   margin: 1rem;
   width: 31%;
+  height: 16.5rem;
   min-width: 23rem;
   max-width: 26rem;
   max-height: 17rem;
-  height: 16.5rem;
-  display: flex;
-  flex-flow: row nowrap;
 }
 
 .box_details {
