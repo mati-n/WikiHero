@@ -11,6 +11,7 @@ class Hero extends Component {
   state = {
     loaded: false,
     error: false,
+    selected: true,
     biography: "visible",
     appearance: "invisible",
     powerstats: "invisible",

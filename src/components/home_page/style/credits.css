@@ -156,10 +156,10 @@
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 90%;
   }
   .hero_nav_item {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #f3f4f6;
     margin: 0 0.3rem;
     padding: 0.3rem;
@@ -169,7 +169,7 @@
   .visible,
   .invisible,
   .hero_details {
-    padding: 0 0.5rem;
+    padding: 0 0;
     text-align: center;
     font-size: 1.2rem;
     letter-spacing: 0.02rem;
@@ -244,5 +244,34 @@
     list-style: square;
     padding: 2rem;
     line-height: 1.5rem;
+  }
+}
+@media only screen and (max-width: 480px) and (min-height: 640px) {
+  .nav_logo {
+    font-size: 1.7rem;
+  }
+  .nav_item {
+    font-size: 1.4rem;
+  }
+  .home_container,
+  .loading_container,
+  .not_found,
+  .loading,
+  .credits,
+  .about {
+    min-height: 28.2rem;
+    height: 100%;
+    max-height: 35rem;
+  }
+  .solutions {
+    padding: 0;
+  }
+  .form_container {
+    font-size: 1.5rem;
+    top: 50%;
+    left: 45%;
+  }
+  .footer {
+    font-size: 1.3rem;
   }
 }
