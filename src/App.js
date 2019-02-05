@@ -5,7 +5,7 @@ import NavBar from "./common/navBar";
 import SearchBar from "./common/searchBar";
 import NotFound from "./common/notFound";
 import Footer from "./common/footer";
-import Compare from "./common/compare";
+// import Compare from "./common/compare";
 import HeroList from "./components/search_page/heroList";
 import Hero from "./components/hero_profile/hero";
 import Home from "./components/home_page/home";
@@ -91,12 +91,6 @@ class App extends Component {
                           heroInfo={searchResult}
                           {...props}
                         />
-                      )}
-                    />
-                    <Route
-                      path="/compare"
-                      render={props => (
-                        <Compare heroes={compareList} {...props} />
                       )}
                     />
                     <Route

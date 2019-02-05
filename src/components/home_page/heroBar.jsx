@@ -10,11 +10,11 @@ class HeroBar extends Component {
   };
 
   componentDidMount = () => {
-    HeroApi.search_id(this.props.heroId).then(result => {
-      this.setState({
-        hero: result.image.url
-      });
-    });
+    // HeroApi.search_id(this.props.heroId).then(result => {
+    //   this.setState({
+    //     hero: result.image.url
+    //   });
+    // });
   };
 
   render() {

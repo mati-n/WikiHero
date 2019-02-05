@@ -139,13 +139,6 @@ class Hero extends Component {
             <button onClick={handleReturn} className="return_button">
               Back to results
             </button>
-
-            {/* <button
-              onClick={() => this.props.heroCompare(hero)}
-              className="return_button"
-            >
-              Add to Compare
-            </button> */}
           </div>
         </div>
       </React.Fragment>
